@@ -21,6 +21,7 @@ fun main(args: Array<String>) {
     doWhileExample()
     workingWithStrings()
     workingWithTemplates()
+    nullSafety()
 }
 
 //if as an expression
@@ -94,7 +95,7 @@ fun forEachIndices(){
 fun forEachWithIndex(){
     val items = listOf("apple", "banana", "kiwi")
     for ((index, value) in items.withIndex()){
-        println("The item at " + index + " is: " + value)
+        println("The item at $index is: $value")
     }
 }
 
@@ -102,7 +103,7 @@ fun whileWithList(){
     val items = listOf("apple", "banana", "kiwi")
     var index = 0
     while (index < items.size){
-        println ("Item at index: " + index + " is: " +  items[index])
+        println ("Item at index: $index is: ${items[index]}")
         index++
     }
 }
@@ -110,7 +111,7 @@ fun whileWithList(){
 fun doWhileExample(){
     var index = 0
     do {
-        println("Do While Index is: " + index)
+        println("Do While Index is: $index")
         index++
     } while (index < 5)
 }
